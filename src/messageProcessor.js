@@ -35,7 +35,7 @@ async function processMessage(message) {
   const docRef = db.collection("gps_data").doc(); // Change 'gps_data' to the desired Firestore collection name
   await docRef.set({
     deviceId: deviceId,
-    timestamp: timestamp,
+    timestamp: Date.now(),
     latitude: latitude,
     latitudeDirection: latitudeDirection,
     longitude: longitude,
