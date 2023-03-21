@@ -43,6 +43,8 @@ async function processMessage(message) {
     speed: speed,
     direction: direction,
     rawData: message,
+    validity: validity,
+    Date: date,
   });
 }
 
