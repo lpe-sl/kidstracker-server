@@ -1,3 +1,5 @@
+const { db } = require("./firebase");
+
 async function processMessage(message) {
   // Split the message into data fields
   const data = message.split(",");
