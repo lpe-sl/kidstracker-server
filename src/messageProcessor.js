@@ -1,5 +1,3 @@
-const { db } = require("./firebase");
-
 async function processMessage(message) {
   // Split the message into data fields
   const data = message.split(",");
@@ -34,12 +32,14 @@ async function processMessage(message) {
   // Save the data to Firebase
   const docRef = db.collection("gps_data").doc(); // Change 'gps_data' to the desired Firestore collection name
   await docRef.set({
-    deviceId: data[0],
-    timestamp: data[1],
-    latitude: parseFloat(data[2]),
-    longitude: parseFloat(data[3]),
-    speed: parseFloat(data[4]),
-    direction: parseFloat(data[5]),
+    deviceId: deviceId,
+    timestamp: timestamp,
+    latitude: latitude,
+    latitudeDirection: latitudeDirection,
+    longitude: longitude,
+    longitudeDirection: longitudeDirection,
+    speed: speed,
+    direction: direction,
     rawData: message,
   });
 }
