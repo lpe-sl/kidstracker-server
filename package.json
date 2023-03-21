@@ -1,0 +1,15 @@
+{
+  "name": "kidstracker-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "firebase-admin": "^10.0.1",
+    "net": "^1.0.2"
+  },
+  "author": "",
+  "license": "ISC"
+}
