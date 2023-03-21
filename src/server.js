@@ -3,7 +3,7 @@ const { processMessage } = require("./messageProcessor");
 const rateLimit = require("../config/rateLimit");
 
 const server = net.createServer((socket) => {
-  console.log("Client connected");
+  console.log("Client connected on", socket.remotePort);
   rateLimit(socket); // Apply rate limiting
 
   socket.on("data", (data) => {
