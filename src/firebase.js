@@ -6,5 +6,6 @@ admin.initializeApp({
 });
 
 const db = admin.firestore();
+const rdb = admin.database();
 
-module.exports = { db };
+module.exports = { db, rdb };

@@ -1,4 +1,4 @@
-const { db } = require("./firebase");
+const { db, rdb } = require("./firebase");
 
 async function processMessage(message) {
   // Split the message into data fields
@@ -45,6 +45,12 @@ async function processMessage(message) {
     rawData: message,
     validity: validity,
     Date: date,
+  });
+  await rdb.ref(`trackers/${deviceId}`).update({
+    coordinate: {
+      latitude: latitude,
+      longitude: longitude,
+    },
   });
 }
 
