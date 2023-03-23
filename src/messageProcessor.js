@@ -20,16 +20,16 @@ async function processMessage(message) {
   const direction = parseFloat(data[10]);
   const date = data[11];
 
-  console.log(`Header: ${header}`);
-  console.log(`Device ID: ${deviceId}`);
-  console.log(`Command: ${command}`);
-  console.log(`Timestamp: ${timestamp}`);
-  console.log(`Validity: ${validity}`);
-  console.log(`Latitude: ${latitude} ${latitudeDirection}`);
-  console.log(`Longitude: ${longitude} ${longitudeDirection}`);
-  console.log(`Speed: ${speed}`);
-  console.log(`Direction: ${direction}`);
-  console.log(`Date: ${date}`);
+  // console.log(`Header: ${header}`);
+  // console.log(`Device ID: ${deviceId}`);
+  // console.log(`Command: ${command}`);
+  // console.log(`Timestamp: ${timestamp}`);
+  // console.log(`Validity: ${validity}`);
+  // console.log(`Latitude: ${latitude} ${latitudeDirection}`);
+  // console.log(`Longitude: ${longitude} ${longitudeDirection}`);
+  // console.log(`Speed: ${speed}`);
+  // console.log(`Direction: ${direction}`);
+  // console.log(`Date: ${date}`);
 
   // Save the data to Firebase
   const docRef = db.collection("gps_data").doc(); // Change 'gps_data' to the desired Firestore collection name
